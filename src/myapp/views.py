@@ -3,5 +3,8 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('Hello, World')
-    pass
+    if request.method == "POST":
+        name = request.POST.get("name")
+        return HttpResponse(f"len is {len(name)}")
+
+    return HttpResponse("NO POST RESPONSE")
