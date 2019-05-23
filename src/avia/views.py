@@ -15,14 +15,11 @@ def create(request):
         form = AviaForm(request.POST)
         if form.is_valid():
             avia_passengers = form.cleaned_data['avia_passengers']
-            price = 100
 
-            if avia_passengers > 1:
-                price = 100 * 2 * avia_passengers
+            price = 100 if avia_passengers == 1 else 100 * 2 * avia_passengers
 
             return render(request, "avia/results.html", {"price": price, "form": form})
         else:
-            errors = form.errors
-            return HttpResponse(f"{errors}")
+            return HttpResponse(f"{form.errors}")
     else:
         return redirect(index)
