@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('age', age),
     path('avia', avia.index),
-    path('avia/create', avia.create)
+    path('avia/create', avia.create, name="avia_create")
 ]

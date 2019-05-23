@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect
+from avia.forms import AviaForm
 
 
 # Create your views here.
 
 def index(request):
-    return render(request, "avia/index.html")
+    form = AviaForm()
+    return render(request, "avia/index.html", {"form": form})
 
 
 def create(request):

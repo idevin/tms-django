@@ -1,18 +1,33 @@
-<form>
+<form method="POST" action="{% url "avia_create" %}">
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
             <div class="medium-12 cell">
-                <label>Input Label
-                    <input type="text" placeholder="">
+                <label> {{ form.avia_name.label }}
+                    {{ form.avia_name }}
                 </label>
             </div>
             <div class="medium-12 cell">
-                <label>Input Label
-                    <input type="text" placeholder="">
+                <label> {{ form.avia_from.label }}
+                    {{ form.avia_from }}
                 </label>
             </div>
             <div class="medium-12 cell">
-                 <input type="submit" class="button" value="Submit">
+                <label> {{ form.avia_to.label }}
+                    {{ form.avia_to }}
+                </label>
+            </div>
+            <div class="medium-12 cell">
+                <label> {{ form.avia_passengers.label }}
+                    {{ form.avia_passengers }}
+                </label>
+            </div>
+            <div class="medium-12 cell">
+                <label> {{ form.avia_date.label }}
+                    {{ form.avia_date }}
+                </label>
+            </div>
+            <div class="medium-12 cell">
+                <input type="submit" class="button" value="OK">
             </div>
         </div>
     </div>
