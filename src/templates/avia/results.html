@@ -1,10 +1,26 @@
- %{ include "avia/_header.html" %}
+{% include "avia/_header.html" %}
+
+{% for field in form %}
+    <div class="row">
+        <div class="medium-6 columns">
+            {{ field.label }}
+        </div>
+        <div class="medium-6 columns">
+            {{ field.value }}
+        </div>
+    </div>
+{% endfor %}
+
+<hr>
+
+ЦЕНА: {{ price }}
 
 <div class="row">
     <div class="medium-12 columns">
-{#        {% context %}#}
+        {{ field.label }}
     </div>
 </div>
+
 
 {% include "avia/_footer.html" %}
 

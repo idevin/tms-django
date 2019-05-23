@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'one',
-    'avia'
+    'avia',
+    'cw20'
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             'templates',
+            'cw20.templates'
         ],
         'APP_DIRS': True,
         'OPTIONS': {
